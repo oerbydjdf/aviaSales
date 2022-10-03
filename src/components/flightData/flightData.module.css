@@ -1,0 +1,33 @@
+.flightData {
+    background-color: white;
+    width: 502px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+
+}
+.flightData >*{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flightData >*:not(:last-child){
+    margin: 0 0 20px 0;
+}
+.text {
+    color: rgba(160, 176, 185, 1);
+    font-size: 12px;
+    line-height: 18px;
+    
+}
+.data {
+    color: rgba(74, 74, 74, 1);
+    font-size: 14px;
+    line-height: 21px;
+}
+.price {
+    color: rgba(33, 150, 243, 1);
+    font-size: 24px;
+    line-height: 24px;
+}
