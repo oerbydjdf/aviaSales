@@ -37,9 +37,11 @@ class Store {
     getBandlTicket = (obj: BandlTickets) => this.bandl = obj;
 
     getArrIndexParam = (arr: number[]) => {
-        if(this.arrSortTickets !== undefined && arr.length === 0) return this.arrSortTickets;
+        // if(this.arrSortTickets !== undefined && arr.length === 0) return this.arrSortTickets;
         this.arrSortTickets = useSortTicketsParam(this.bandl.arrTicket, arr);
+        if(this.arrSortTickets === undefined && this.navNumber !== undefined) return this.getNumNavigation(this.navNumber)
         if(this.navNumber !== undefined && this.arrSortTickets !== undefined) useSortPrice(this.arrSortTickets, this.navNumber)
+        // console.log(this.arrSortTickets + ';' + this.navNumber)
     }  
       
     getNumNavigation = (num: number) => {
